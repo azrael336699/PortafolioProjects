@@ -1,3 +1,5 @@
+/* Habilidades utilizadas: Joins, CTE's, Tablas Temporales, Windows Functions, Aggregate Functions, Creaci√≥n de Views, Convertir tipos de Datos
+*/
 --Seleccionar datos a utilizar de las tablas
 SELECT location,date,total_cases,new_cases,total_deaths, population
 FROM Coviddeaths
@@ -19,7 +21,7 @@ ALTER TABLE Coviddeaths ALTER COLUMN total_cases float
 
 ALTER TABLE Coviddeaths ALTER COLUMN total_deaths float
 
---se vuelve a intentar el calculo que nos mostro el error en el tipo de datos anteriormente, aÒadiendo el filtro solo para Mexico
+--se vuelve a intentar el calculo que nos mostro el error en el tipo de datos anteriormente, a√±adiendo el filtro solo para Mexico
 
 SELECT location,date,total_cases,total_deaths,((total_deaths/total_cases)*100) AS Deathpercentage, population
 FROM Coviddeaths
@@ -37,7 +39,7 @@ FROM Coviddeaths
 WHERE location ='Mexico'
 ORDER BY location,date
 
---ahora quiero ver que paises tiene el mayor porcentaje de contagios segun el tamaÒo de su poblacion
+--ahora quiero ver que paises tiene el mayor porcentaje de contagios segun el tama√±o de su poblacion
 --se pone group by porque me dio error de que esas columnas no estaban en un group by
 
 SELECT location, MAX(total_cases)AS Highest_InfectionCount,population,(MAX((total_cases/population)*100)) AS Population_infected_percentage
