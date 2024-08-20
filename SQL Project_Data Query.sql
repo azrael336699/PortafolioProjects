@@ -1,5 +1,5 @@
-Fuente de datos: https://ourworldindata.org/covid-deaths, actualizados hasta el 9 de julio de 2024
-/* Habilidades utilizadas: Joins, CTE's, Tablas Temporales, Windows Functions, Aggregate Functions, Creación de Views, Convertir tipos de Datos
+/*Fuente de datos: https://ourworldindata.org/covid-deaths, actualizados hasta el 9 de julio de 2024.
+ Habilidades utilizadas: Joins, CTE's, Tablas Temporales, Windows Functions, Aggregate Functions, Creación de Views, Convertir tipos de Datos
 */
 --Seleccionar datos a utilizar de las tablas
 SELECT location,date,total_cases,new_cases,total_deaths, population
